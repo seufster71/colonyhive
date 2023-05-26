@@ -20,15 +20,15 @@ checkAndCommit() {
 commitAll() {
 	
 	ECHO "#### core"
-	cd ~/git/j4reef/j4reef/src/main/js/core
+	cd ~/git/colonyhive/colonyhive/src/main/js/core
 	checkAndCommit "${1}"
 	
 	ECHO "#### coreView"
-	cd ~/git/j4reef/j4reef/src/main/js/coreView
+	cd ~/git/colonyhive/colonyhive/src/main/js/coreView
 	checkAndCommit "${1}"
 	
 	ECHO "#### main"
-	cd ~/git/j4reef/j4reef
+	cd ~/git/colonyhive/colonyhive
 	checkAndCommit "${1}"
 	
 	ECHO "#### Done committing"

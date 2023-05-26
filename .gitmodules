@@ -1,0 +1,8 @@
+[submodule "colonyhive/src/main/js/core"]
+	path = colonyhive/src/main/js/core
+	url = https://github.com/seufster71/toasthub-react-core.git
+	branch = feature/colony_1_from_develop
+[submodule "colonyhive/src/main/js/coreView"]
+	path = colonyhive/src/main/js/coreView
+	url = https://github.com/seufster71/toasthub-reactweb-core.git
+	branch = feature/colony_1_from_develop
