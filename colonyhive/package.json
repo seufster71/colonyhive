@@ -1,8 +1,8 @@
 {
-  "name": "j4reef",
+  "name": "ColonyHive",
   "version": "1.0.0",
   "description": "test",
-  "main": "app.js",
+  "main": "App.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint webpack.config.* src",
     "dev": "webpack -d --watch",

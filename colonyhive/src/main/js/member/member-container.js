@@ -18,7 +18,7 @@ import ScheduleContainer from './schedule/schedule-container';
 import LogoutContainer from './logout/logout-container';
 import MemberView from '../memberView/member-view';
 import fuLogger from '../core/common/fu-logger';
-import {PrivateRoute} from '../core/common/utils';
+import {PrivateRoute} from '../core/common/router-utils-web';
 
 function MemberContainer() {
 	const memberState = useSelector((state) => state.member);
@@ -57,14 +57,14 @@ function MemberContainer() {
           menus={myMenus} changeTab={changeTab} activeTab={window.location.pathname} user={session.user} profileMenu={profileMenu}/>
           <StatusView/>
           <Routes>
-            <Route element={<PrivateRoute permissions={myPermissions} code="MCTR" minRights="W" pathto="/access-denied" />} >
+            <Route element={<PrivateRoute permissions={myPermissions} code="MCTR" pathto="/access-denied" />} >
 				<Route path="/member-controller/*" element={<ControllerContainer />} />
 			</Route>
-            <Route element={<PrivateRoute permissions={myPermissions} code="MPL" minRights="W" pathto="/access-denied" />} >
+            <Route element={<PrivateRoute permissions={myPermissions} code="MPL" pathto="/access-denied" />} >
 				<Route path="/member-plug/*" element={<PlugContainer />} />
 			</Route>
-            <Route path="/member-schedule/*" element={<PrivateRoute permissions={myPermissions} code="MPL" minRights="W" pathto="/access-denied" component="<ScheduleContainer />" />} />
-            <Route path="/member-profile/*" element={<PrivateRoute permissions={myPermissions} code="MP" minRights="W" pathto="/access-denied" component="<ProfileContainer />" />} />
+            <Route path="/member-schedule/*" element={<PrivateRoute permissions={myPermissions} code="MPL" pathto="/access-denied" component="<ScheduleContainer />" />} />
+            <Route path="/member-profile/*" element={<PrivateRoute permissions={myPermissions} code="MP" pathto="/access-denied" component="<ProfileContainer />" />} />
             <Route path="/member-logout/*" element={<PrivateRoute permissions={myPermissions} code="MLO" pathto="/access-denied" component="<LogoutContainer />" />} />
             <Route path="admin/*" render={() => ( 
               <Navigate replace to="/admin"/>

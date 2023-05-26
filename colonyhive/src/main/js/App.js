@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { initPublic } from "./core/common/apppref-actions";
 import { sessionCheck, viewPortChange } from "./member/session/session-actions";
-import PageContainer from "./PageContainer.js";
+import PageContainer from "./page-container.js";
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import Theme from './theme.css';
 import utils from './core/common/utils';
